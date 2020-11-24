@@ -47,6 +47,7 @@ public class AppleSpawner : MonoBehaviour
         timeToSpawn -= Time.deltaTime;
         if (timeToSpawn <= 0)
         {
+			Debug.Log("Spawn");
             SpawnObject();
             timeToSpawn = DetermineSpawnTime();
         }
@@ -66,7 +67,10 @@ public class AppleSpawner : MonoBehaviour
         // to a random position calculated by GetSpawnPosition()
         // ================================================
 
-
+		if (spawner.Spawn())
+		{
+			spawner.MostRecentlySpawnedObject.GetComponent<Transform>().position = GetSpawnPosition();
+		}
 
         // ================================================
     }

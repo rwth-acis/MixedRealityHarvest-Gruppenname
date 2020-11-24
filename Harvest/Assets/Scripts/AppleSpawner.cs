@@ -27,6 +27,7 @@ public class AppleSpawner : MonoBehaviour
         // so that Update is not called until the game starts
         // ================================================
 
+		enabled = false;
 
         // ================================================
     }
@@ -47,7 +48,6 @@ public class AppleSpawner : MonoBehaviour
         timeToSpawn -= Time.deltaTime;
         if (timeToSpawn <= 0)
         {
-			Debug.Log("Spawn");
             SpawnObject();
             timeToSpawn = DetermineSpawnTime();
         }

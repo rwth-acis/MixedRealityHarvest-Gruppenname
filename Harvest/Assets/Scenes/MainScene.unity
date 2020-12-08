@@ -276,6 +276,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &503643616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36981d974b5546a4cbfa0b4bfa0c0ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handleMaterial: {fileID: 0}
+  handleGrabbedMaterial: {fileID: 0}
+  handlePrefab: {fileID: 0}
+  handleSize: 0.05
+  colliderPadding: {x: 0.016, y: 0.016, z: 0.016}
+  drawTetherWhenManipulating: 1
+  handlesIgnoreCollider: {fileID: 0}
+  handlePrefabColliderType: 1
+  showHandleForX: 0
+  showHandleForY: 1
+  showHandleForZ: 0
 --- !u!1 &566553733
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +696,29 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &1064262534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fcb6341cafc3f84994828d3606683d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handleMaterial: {fileID: 0}
+  handleGrabbedMaterial: {fileID: 0}
+  handlePrefab: {fileID: 0}
+  handleSize: 0.016
+  colliderPadding: {x: 0.016, y: 0.016, z: 0.016}
+  drawTetherWhenManipulating: 1
+  handlesIgnoreCollider: {fileID: 0}
+  handlePrefabColliderType: 1
+  showHandleForX: 0
+  showHandleForY: 0
+  showHandleForZ: 0
 --- !u!1001 &1192383255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -763,12 +809,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1286297070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5f249786382754b8635a1375f7b76c, type: 3}
+  m_Script: {fileID: 11500000, guid: 149fa3ae453128b41940b5caa905f8ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   handType: 3
   proximityType: 3
-  faceAway: 0
+  constraintOnMovement: 2
+  useLocalSpaceForConstraint: 0
 --- !u!114 &1286297076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -783,7 +830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handType: 3
   proximityType: 3
-  constraintOnRotation: 2
+  constraintOnRotation: 5
   useLocalSpaceForConstraint: 0
 --- !u!114 &1286297077
 MonoBehaviour:
@@ -846,8 +893,8 @@ MonoBehaviour:
   boxDisplayConfiguration: {fileID: 0}
   linksConfiguration: {fileID: 0}
   scaleHandlesConfiguration: {fileID: 1669621563}
-  rotationHandlesConfiguration: {fileID: 1609222280}
-  translationHandlesConfiguration: {fileID: 0}
+  rotationHandlesConfiguration: {fileID: 503643616}
+  translationHandlesConfiguration: {fileID: 1064262534}
   handleProximityEffectConfiguration: {fileID: 0}
   hideElementsInInspector: 1
   smoothingActive: 0
@@ -889,8 +936,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoConstraintSelection: 0
   selectedConstraints:
-  - {fileID: 1286297075}
   - {fileID: 1286297076}
+  - {fileID: 1286297075}
 --- !u!114 &1286297080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -903,6 +950,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9e9fece30c39d4da83f7f62a04136f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1543518083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36981d974b5546a4cbfa0b4bfa0c0ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handleMaterial: {fileID: 0}
+  handleGrabbedMaterial: {fileID: 0}
+  handlePrefab: {fileID: 0}
+  handleSize: 0.05
+  colliderPadding: {x: 0.016, y: 0.016, z: 0.016}
+  drawTetherWhenManipulating: 1
+  handlesIgnoreCollider: {fileID: 0}
+  handlePrefabColliderType: 1
+  showHandleForX: 0
+  showHandleForY: 1
+  showHandleForZ: 0
 --- !u!114 &1564720564 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6514366789737894151, guid: 8570d72138a0aa94cb99813017a3fc74,
@@ -915,29 +985,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9e28b5bc41bde04494606557573d6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1609222280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: Microsoft.MixedReality.Toolkit.SDK:Microsoft.MixedReality.Toolkit.UI.BoundsControl:RotationHandlesConfiguration
-  handleMaterial: {fileID: 0}
-  handleGrabbedMaterial: {fileID: 0}
-  handlePrefab: {fileID: 0}
-  handleSize: 0.016
-  colliderPadding: {x: 0.016, y: 0.016, z: 0.016}
-  drawTetherWhenManipulating: 1
-  handlesIgnoreCollider: {fileID: 0}
-  handlePrefabColliderType: 1
-  showHandleForX: 0
-  showHandleForY: 1
-  showHandleForZ: 0
 --- !u!114 &1669621563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1026,29 +1073,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2121978384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: Microsoft.MixedReality.Toolkit.SDK:Microsoft.MixedReality.Toolkit.UI.BoundsControl:RotationHandlesConfiguration
-  handleMaterial: {fileID: 0}
-  handleGrabbedMaterial: {fileID: 0}
-  handlePrefab: {fileID: 0}
-  handleSize: 0.016
-  colliderPadding: {x: 0.016, y: 0.016, z: 0.016}
-  drawTetherWhenManipulating: 1
-  handlesIgnoreCollider: {fileID: 0}
-  handlePrefabColliderType: 1
-  showHandleForX: 0
-  showHandleForY: 1
-  showHandleForZ: 0
 --- !u!1 &919132148455930215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4955453835796537761, guid: 03a93bfbc8c224d4eb29f819ce70fb4b,
@@ -1179,7 +1203,7 @@ MonoBehaviour:
   boxDisplayConfiguration: {fileID: 0}
   linksConfiguration: {fileID: 0}
   scaleHandlesConfiguration: {fileID: 1824745605}
-  rotationHandlesConfiguration: {fileID: 2121978384}
+  rotationHandlesConfiguration: {fileID: 1543518083}
   translationHandlesConfiguration: {fileID: 0}
   handleProximityEffectConfiguration: {fileID: 0}
   hideElementsInInspector: 0
@@ -1248,7 +1272,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handType: 3
   proximityType: 3
-  constraintOnRotation: 2
+  constraintOnRotation: 5
+  useLocalSpaceForConstraint: 0
+--- !u!114 &919132148455930226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148455930215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149fa3ae453128b41940b5caa905f8ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handType: 3
+  proximityType: 3
+  constraintOnMovement: 2
   useLocalSpaceForConstraint: 0
 --- !u!1001 &2958358508639388225
 PrefabInstance:

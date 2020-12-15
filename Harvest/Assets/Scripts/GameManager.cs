@@ -71,7 +71,8 @@ public class GameManager : MonoBehaviour
 	{
 		RemainingTime -= Time.deltaTime;
 
-        if (RemainingTime <= 0){
+        if (RemainingTime <= 0)
+        {
             FinishGame();
         }
 

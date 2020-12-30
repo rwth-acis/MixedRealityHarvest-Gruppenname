@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     // TODO: Task 2.3(e)
     // Add a field that allows you to assign the highscore label in the inspector
     // ================================================
-	public TextMeshPro highscoreLabel;
+    [SerializeField] private TextMeshPro highscoreLabel;
     // ================================================
 
     private void Start()
